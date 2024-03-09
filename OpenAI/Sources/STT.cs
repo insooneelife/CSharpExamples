@@ -5,22 +5,13 @@ using System.Net.Http.Headers;
 using System.Reflection.Metadata;
 using System.Threading.Tasks;
 
-namespace STT
+namespace OpenAI
 {
-	class WhisperAPI
+	class STT
 	{
-		public static string API_Key = "";
-
-		public static void LoadAPIKey()
-		{
-			string currentDir = Directory.GetCurrentDirectory();
-			string apiKeyFilePath = Path.Combine(currentDir, "Data", "api_key.txt");
-			API_Key = File.ReadAllText(apiKeyFilePath).Trim();
-		}
-
 		public static async Task Translation(string filePath)
 		{
-			string apiKey = API_Key; 
+			string apiKey = OpenAI.Common.API_Key; 
 			string apiUrl = "https://api.openai.com/v1/audio/translations";
 
 			using (var httpClient = new HttpClient())
@@ -57,7 +48,7 @@ namespace STT
 
 		public static async Task Transcription(string filePath)
 		{
-			string apiKey = API_Key;
+			string apiKey = OpenAI.Common.API_Key;
 			string apiUrl = "https://api.openai.com/v1/audio/transcriptions";
 
 			using (var httpClient = new HttpClient())
