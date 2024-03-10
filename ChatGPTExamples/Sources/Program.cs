@@ -215,7 +215,7 @@ namespace GameSample
 	{
 		static private void Main(string[] args)
 		{
-			var chatGPT = new ChatGPT("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", "gpt-4");
+			var chatGPT = new ChatGPT("API_KEY", "gpt-4");
 
 			chatGPT.AddFunction(GPT.InitGame);
 			chatGPT.AddFunction(GPT.PrintGame);

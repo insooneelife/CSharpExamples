@@ -13,7 +13,7 @@ namespace ChatGPTAPIExamples
 		static async Task Main(string[] args)
 		{
 			var httpClient = new HttpClient();
-			var apiKey = "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";
+			var apiKey = "API_KEY";
 			var url = "https://api.openai.com/v1/chat/completions";
 
 			var requestData = new
