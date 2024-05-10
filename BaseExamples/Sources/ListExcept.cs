@@ -20,6 +20,6 @@ class ListExcept
 		foreach (int value in resultList)
 		{
 			Console.WriteLine(value);
-		}
-	}
+		}		
+	}	
 }
